@@ -24,8 +24,8 @@ int main(int argc, char *argv[]){
 		quicksort(n, 0, argc-1);
 	}
 
-	for(i=0; i<argc-1; i++)
-		printf("%i\n",n[i]);
+	for(i = 0; i < argc - 1; i++)
+		printf("%i\n", n[i]);
 	
 	return 0;
 
