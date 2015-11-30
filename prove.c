@@ -23,13 +23,26 @@ t_rect *makerect(t_point, t_point);
 int calcarea(t_rect *);
 int calcarea2(t_rect rect);
 void printrect(t_rect *);
+void foo(void);
 
 // main
 int main(int argc, char *argv[])
 {	
 	//pointers();
+	foo();
 	structures();
 	return 0;
+}
+
+void foo()
+{
+	char c;
+//	while((c = getchar()) != EOF)
+//		putchar(c);
+	
+	while((c = getc(stdin)) != EOF)
+		putchar(c, stdout);
+
 }
 
 //
@@ -102,7 +115,9 @@ t_rect *makerect(t_point p1, t_point p2)
 // print the point
 void printpoint(t_point *pt)
 {
-	printf("point: %s, %i, %i\n", pt->name, pt->x, pt->y);
+	//printf("point: %s, %i, %i\n", pt->name, pt->x, pt->y);
+	// otherwise
+	printf("point: %s, %i, %i\n", (*pt).name, (*pt).x, (*pt).y);
 }
 
 //
